@@ -1,6 +1,6 @@
-import { Component } from 'solid-js';
 import '@material/mwc-button';
 import { A } from '@solidjs/router';
+import { Component } from 'solid-js';
 
 const HomePage: Component = () => (
   <div class="max-w-none p-4 card prose">
@@ -28,7 +28,7 @@ const HomePage: Component = () => (
       <a href="https://github.com/KMarxist/IdeoVector">距离公式</a>知道你和别人的“距离”了。
     </p>
     <A href="/IdeoVector/quest">
-      <mwc-button outlined label="开始测试" />
+      <mwc-button label="开始测试" raised />
     </A>
     <A href="/IdeoVector/distance" class="ml-2">
       <mwc-button outlined label="距离计算器" />

@@ -24,13 +24,7 @@ const QuestPage: Component = () => {
       </p>
       <p class="mt-2 text-lg lg:text-2xl">{quest().question}</p>
       <form class="w-full lg:w-[75%] xl:w-[50%] mt-8">
-        <mwc-button
-          onClick={() => submit(2)}
-          style={{ '--mdc-theme-primary': '#059669' }}
-          raised
-          label="强烈同意"
-          fullwidth
-        />
+        <mwc-button onClick={() => submit(2)} raised label="强烈同意" fullwidth />
         <mwc-button
           onClick={() => submit(1)}
           style={{ '--mdc-theme-primary': '#34D399' }}

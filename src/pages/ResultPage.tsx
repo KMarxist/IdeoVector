@@ -1,6 +1,7 @@
 import '@material/mwc-button';
 import { A, useLocation } from '@solidjs/router';
 import { Component, For } from 'solid-js';
+import { toast } from 'solid-toast';
 import Result from '../components/Result';
 import ideologies from '../data/ideologies';
 import questions from '../data/questions';
@@ -63,9 +64,20 @@ const ResultPage: Component = () => {
       <h2 class="text-2xl mt-4">你的坐标信息</h2>
       <p class="mt-2 select-all font-mono">{resQuery.res}</p>
       <p class="mt-2">根据这一信息，你可以计算与别人的距离</p>
-      <A href={`/IdeoVector/distance?res=${resQuery.res}`} class="mt-2">
-        <mwc-button label="去计算" outlined />
-      </A>
+      <div class="flex mt-2">
+        <mwc-button
+          label="复制我的坐标码"
+          outlined
+          onClick={(e) => {
+            e.preventDefault();
+            navigator.clipboard.writeText(resQuery.res);
+            toast.success('已复制到剪贴板');
+          }}
+        />
+        <A href={`/IdeoVector/distance?res=${resQuery.res}`} class="ml-2">
+          <mwc-button label="去计算" outlined />
+        </A>
+      </div>
     </div>
   );
 };

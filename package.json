@@ -38,6 +38,7 @@
     "@solidjs/router": "^0.5.1",
     "base64-js": "^1.5.1",
     "gzip-js": "^0.3.2",
-    "solid-js": "^1.6.5"
+    "solid-js": "^1.6.5",
+    "solid-toast": "^0.3.5"
   }
 }

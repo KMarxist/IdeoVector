@@ -1,13 +1,16 @@
 import { A, Route, Routes } from '@solidjs/router';
 import { Component } from 'solid-js';
+import { Toaster } from 'solid-toast';
 import icon from './assets/favicon.png';
 import DistancePage from './pages/DistancePage';
 import HomePage from './pages/HomePage';
 import QuestPage from './pages/QuestPage';
 import ResultPage from './pages/ResultPage';
+import './style.css';
 
 const App: Component = () => (
   <>
+    <Toaster position="top-center" gutter={8} />
     <header class="card p-4">
       <A href="/IdeoVector/" class="flex no-underline text-inherit">
         <img src={icon} height="24" width="24" class="h-6 w-6 object-contain" />

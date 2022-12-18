@@ -20,6 +20,7 @@ specifiers:
   gzip-js: ^0.3.2
   prettier: ^2.8.1
   solid-js: ^1.6.5
+  solid-toast: ^0.3.5
   typescript: ^4.9.4
   typescript-plugin-css-modules: ^4.1.1
   vite: ^3.2.3
@@ -33,6 +34,7 @@ dependencies:
   base64-js: 1.5.1
   gzip-js: 0.3.2
   solid-js: 1.6.5
+  solid-toast: 0.3.5_solid-js@1.6.5
 
 devDependencies:
   '@types/babel__core': 7.1.20
@@ -2919,6 +2921,14 @@ packages:
       '@babel/types': 7.20.5
       solid-js: 1.6.5
     dev: true
+
+  /solid-toast/0.3.5_solid-js@1.6.5:
+    resolution: {integrity: sha512-m4PX2ESex9nSwt9d9XTr3r+Kp3vjSoViDWj3gj6Xxgz21IKYODMKhACXurlZCztz56NQBnfX2m4es4I8JgXGQQ==}
+    peerDependencies:
+      solid-js: ^1.5.4
+    dependencies:
+      solid-js: 1.6.5
+    dev: false
 
   /source-map-js/1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
