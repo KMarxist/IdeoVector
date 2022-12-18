@@ -19,8 +19,8 @@ const App: Component = () => (
         <Route path="/IdeoVector">
           <Route path="/" element={<HomePage />} />
           <Route path="/quest" element={<QuestPage />} />
-          <Route path="/result/*res" element={<ResultPage />} />
-          <Route path="/distance/*res" element={<DistancePage />} />
+          <Route path="/result" element={<ResultPage />} />
+          <Route path="/distance" element={<DistancePage />} />
         </Route>
       </Routes>
     </main>

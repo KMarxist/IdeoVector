@@ -1,12 +1,13 @@
-import { useParams } from '@solidjs/router';
-import { Component, createSignal, Show } from 'solid-js';
 import '@material/mwc-button';
-import calculateDistance from '../utils/calculateDistance';
+import { useLocation } from '@solidjs/router';
+import { Component, createSignal, Show } from 'solid-js';
 import questions from '../data/questions';
+import calculateDistance from '../utils/calculateDistance';
 
 const DistancePage: Component = () => {
-  const params = useParams<{ res: string }>();
-  const [myRes, setMyRes] = createSignal(params.res);
+  const loc = useLocation<{ res: string }>();
+  const resQuery = loc.query.res;
+  const [myRes, setMyRes] = createSignal(resQuery);
   const [otherRes, setOtherRes] = createSignal('');
   const [distance, setDistance] = createSignal<number | null>(null);
   return (

@@ -1,5 +1,5 @@
 import '@material/mwc-button';
-import { A, useParams } from '@solidjs/router';
+import { A, useLocation } from '@solidjs/router';
 import { Component, For } from 'solid-js';
 import Result from '../components/Result';
 import ideologies from '../data/ideologies';
@@ -7,8 +7,9 @@ import questions from '../data/questions';
 import { decResult } from '../utils/processResult';
 
 const ResultPage: Component = () => {
-  const params = useParams<{ res: string }>();
-  const result = decResult(params.res).map((res) => {
+  const loc = useLocation<{ res: string }>();
+  const resQuery = loc.query;
+  const result = decResult(resQuery.res).map((res) => {
     switch (res) {
       case 0:
         return 0;
@@ -60,9 +61,9 @@ const ResultPage: Component = () => {
       <p class="mt-2">{ideologiesDistances[1].desc}</p>
       <hr />
       <h2 class="text-2xl mt-4">你的坐标信息</h2>
-      <p class="mt-2 select-all font-mono">{params.res}</p>
+      <p class="mt-2 select-all font-mono">{resQuery.res}</p>
       <p class="mt-2">根据这一信息，你可以计算与别人的距离</p>
-      <A href={`/IdeoVector/distance/${params.res}`} class="mt-2">
+      <A href={`/IdeoVector/distance?res=${resQuery.res}`} class="mt-2">
         <mwc-button label="去计算" outlined />
       </A>
     </div>
