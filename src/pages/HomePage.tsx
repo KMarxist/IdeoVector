@@ -28,7 +28,10 @@ const HomePage: Component = () => (
       <a href="https://github.com/KMarxist/IdeoVector">距离公式</a>知道你和别人的“距离”了。
     </p>
     <A href="/IdeoVector/quest">
-      <mwc-button outlined label="快点端上来吧" />
+      <mwc-button outlined label="开始测试" />
+    </A>
+    <A href="/IdeoVector/distance" class="ml-2">
+      <mwc-button outlined label="距离计算器" />
     </A>
   </div>
 );

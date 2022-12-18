@@ -1,3 +1,4 @@
+import '@material/mwc-button';
 import { A, useParams } from '@solidjs/router';
 import { Component, For } from 'solid-js';
 import Result from '../components/Result';
@@ -60,10 +61,10 @@ const ResultPage: Component = () => {
       <hr />
       <h2 class="text-2xl mt-4">你的坐标信息</h2>
       <p class="mt-2 select-all font-mono">{params.res}</p>
-      <p class="mt-2">
-        根据这一信息，你可以
-        <A href={`/IdeoVector/distance/${params.res}`}>计算与别人的距离</A>
-      </p>
+      <p class="mt-2">根据这一信息，你可以计算与别人的距离</p>
+      <A href={`/IdeoVector/distance/${params.res}`} class="mt-2">
+        <mwc-button label="去计算" outlined />
+      </A>
     </div>
   );
 };
