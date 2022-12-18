@@ -39,13 +39,16 @@ const DistancePage: Component = () => {
         />
       </form>
       <Show when={distance() !== null}>
-        <p class="mt-2">你们的距离：{distance()}</p>
+        <p class="mt-2">你们的距离：{distance()!.toFixed(2)}</p>
       </Show>
       <div class="prose max-w-none mt-8">
         <h2>距离说明</h2>
         <p>本套测试中，距离的最大值为{Math.sqrt(16 * questions.length).toFixed(2)}。</p>
         <p>
           距离的计算方法是，把对每道题的回答作为一个坐标轴，将两者坐标值的差的平方相加后开根号。
+        </p>
+        <p>
+          具体可见本项目 <a href="https://github.com/KMarxist/IdeoVector">README</a>
         </p>
       </div>
     </div>

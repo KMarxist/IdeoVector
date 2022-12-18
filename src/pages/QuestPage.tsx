@@ -14,7 +14,7 @@ const QuestPage: Component = () => {
     if (questNum() < questions.length - 1) {
       setQuestNum(questNum() + 1);
     } else {
-      navigate(`/result/${encResult(result)}`);
+      navigate(`/IdeoVector/result/${encResult(result)}`);
     }
   };
   return (

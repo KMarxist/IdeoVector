@@ -10,4 +10,5 @@ export default defineConfig({
   build: {
     target: 'chrome59',
   },
+  base: '/IdeoVector/',
 });

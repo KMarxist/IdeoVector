@@ -62,7 +62,7 @@ const ResultPage: Component = () => {
       <p class="mt-2 select-all font-mono">{params.res}</p>
       <p class="mt-2">
         根据这一信息，你可以
-        <A href={`/distance/${params.res}`}>计算与别人的距离</A>
+        <A href={`/IdeoVector/distance/${params.res}`}>计算与别人的距离</A>
       </p>
     </div>
   );
