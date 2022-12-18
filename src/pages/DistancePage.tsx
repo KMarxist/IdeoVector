@@ -43,7 +43,11 @@ const DistancePage: Component = () => {
       </Show>
       <div class="prose max-w-none mt-8">
         <h2>距离说明</h2>
-        <p>本套测试中，距离的最大值为{Math.sqrt(16 * questions.length).toFixed(2)}。</p>
+        <p>
+          本套测试中，距离的最大值为{Math.sqrt(16 * questions.length).toFixed(2)}
+          。距离的差异不是线性的，在距离比较小时，回答间的一点差异会导致距离的巨大变化。距离在 15
+          以内都可以算是比较近的。
+        </p>
         <p>
           距离的计算方法是，把对每道题的回答作为一个坐标轴，将两者坐标值的差的平方相加后开根号。
         </p>

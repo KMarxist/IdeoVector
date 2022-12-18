@@ -14,5 +14,5 @@ export default defineConfig({
       input: { index: resolve(__dirname, 'index.html'), '404': resolve(__dirname, '404.html') },
     },
   },
-  base: '/IdeoVector/',
+  base: process.env.DEV ? undefined : '/IdeoVector/',
 });
