@@ -24,7 +24,8 @@ const HomePage: Component = () => (
     </p>
     <p>
       传统政治坐标系测试会将你的回答对应到各个轴上，但本测试会建立一个 x 维的坐标系（x =
-      题数），把你对每道题的回答作为值，再把这些值组成一个向量返回给你。这样你就能通过求平方平均数知道你和别人的“距离”了。
+      题数），把你对每道题的回答作为值，再把这些值组成一个向量返回给你。这样你就能通过
+      <a href="https://github.com/KMarxist/IdeoVector">距离公式</a>知道你和别人的“距离”了。
     </p>
     <A href="/IdeoVector/quest">
       <mwc-button outlined label="快点端上来吧" />

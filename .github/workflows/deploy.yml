@@ -33,7 +33,7 @@ jobs:
           node-version: '18'
           cache: 'pnpm'
       - name: Install dependencies
-        run: pnpm i
+        run: pnpm i --prefer-offline
       - name: Build page
         run: pnpm build
       - name: Setup Pages
