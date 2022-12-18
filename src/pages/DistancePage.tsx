@@ -7,7 +7,7 @@ import calculateDistance from '../utils/calculateDistance';
 const DistancePage: Component = () => {
   const loc = useLocation<{ res: string }>();
   const resQuery = loc.query.res;
-  const [myRes, setMyRes] = createSignal(resQuery);
+  const [myRes, setMyRes] = createSignal(resQuery || '');
   const [otherRes, setOtherRes] = createSignal('');
   const [distance, setDistance] = createSignal<number | null>(null);
   return (
