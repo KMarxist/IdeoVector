@@ -1,6 +1,7 @@
 import '@material/mwc-button';
 import { useLocation } from '@solidjs/router';
 import { Component, createSignal, Show } from 'solid-js';
+import { toast } from 'solid-toast';
 import questions from '../data/questions';
 import calculateDistance from '../utils/calculateDistance';
 
@@ -35,7 +36,11 @@ const DistancePage: Component = () => {
           disabled={!myRes() || !otherRes()}
           onClick={(e) => {
             e.preventDefault();
-            setDistance(calculateDistance(myRes(), otherRes()));
+            try {
+              setDistance(calculateDistance(myRes(), otherRes()));
+            } catch (err) {
+              toast.error((err as Error).message);
+            }
           }}
         />
       </form>

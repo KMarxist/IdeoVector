@@ -1,5 +1,5 @@
 import { A, Route, Routes } from '@solidjs/router';
-import { Component } from 'solid-js';
+import { Component, ErrorBoundary } from 'solid-js';
 import { Toaster } from 'solid-toast';
 import icon from './assets/favicon.png';
 import DistancePage from './pages/DistancePage';
@@ -9,7 +9,7 @@ import ResultPage from './pages/ResultPage';
 import './style.css';
 
 const App: Component = () => (
-  <>
+  <ErrorBoundary fallback={(err: Error) => <div>出错了：{err.message}</div>}>
     <Toaster position="top-center" gutter={8} />
     <header class="card p-4">
       <A href="/IdeoVector/" class="flex no-underline text-inherit">
@@ -27,7 +27,7 @@ const App: Component = () => (
         </Route>
       </Routes>
     </main>
-  </>
+  </ErrorBoundary>
 );
 
 export default App;
