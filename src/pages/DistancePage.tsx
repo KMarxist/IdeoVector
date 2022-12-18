@@ -54,11 +54,16 @@ const DistancePage: Component = () => {
           。距离的差异不是线性的，在距离比较小时，回答间的一点差异会导致距离的巨大变化。距离在 15
           以内都可以算是比较近的。
         </p>
+        <ul>
+          <li>≤12 - 一个政治光谱比较单一的社区内，成员之间的距离</li>
+          <li>
+            17.7 - 网站作者（自由意志社会主义）到绝对中间派（全选中立，相当于坐标轴原点）的距离
+          </li>
+          <li>≥23 - 可以认为双方对彼此是 Unacceptable（可接受的）</li>
+        </ul>
         <p>
-          距离的计算方法是，把对每道题的回答作为一个坐标轴，将两者坐标值的差的平方相加后开根号。
-        </p>
-        <p>
-          具体可见本项目 <a href="https://github.com/KMarxist/IdeoVector">README</a>
+          距离的计算方法是，把对每道题的回答作为一个坐标轴，将两者坐标值的差的平方相加后开根号。具体可见本项目{' '}
+          <a href="https://github.com/KMarxist/IdeoVector">README</a>
         </p>
       </div>
     </div>
