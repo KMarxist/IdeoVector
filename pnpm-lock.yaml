@@ -8,7 +8,6 @@ specifiers:
   '@types/node': ^18.11.16
   '@typescript-eslint/eslint-plugin': ^5.46.1
   '@typescript-eslint/parser': ^5.46.1
-  base64-js: ^1.5.1
   cross-env: ^7.0.3
   eslint: ^8.30.0
   eslint-config-airbnb-base: ^15.0.0
@@ -18,6 +17,7 @@ specifiers:
   eslint-plugin-prettier: ^4.0.0
   eslint-plugin-solid: ^0.9.1
   gzip-js: ^0.3.2
+  js-base64: ^3.7.3
   prettier: ^2.8.1
   solid-js: ^1.6.5
   solid-toast: ^0.3.5
@@ -31,8 +31,8 @@ specifiers:
 dependencies:
   '@material/mwc-button': 0.27.0
   '@solidjs/router': 0.5.1_solid-js@1.6.5
-  base64-js: 1.5.1
   gzip-js: 0.3.2
+  js-base64: 3.7.3
   solid-js: 1.6.5
   solid-toast: 0.3.5_solid-js@1.6.5
 
@@ -933,10 +933,6 @@ packages:
   /balanced-match/1.0.2:
     resolution: {integrity: sha512-3oSeUO0TMV67hN1AmbXsK4yaqU7tjiHlbxRDZOpH0KW9+CeX4bRAaX0Anxt0tx2MrpRpWwQaPwIlISEJhYU5Pw==}
     dev: true
-
-  /base64-js/1.5.1:
-    resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
-    dev: false
 
   /big.js/3.2.0:
     resolution: {integrity: sha512-+hN/Zh2D08Mx65pZ/4g5bsmNiZUuChDiQfTUQ7qJr4/kuopCr88xZsAXv6mBoZEsUI4OuGHlX59qE94K2mMW8Q==}
@@ -2243,6 +2239,10 @@ packages:
     resolution: {integrity: sha512-L3BJStEf5NAqNuzrpfbN71dp43mYIcBUlCRea/vdyv5dW/AYa1d4bpelko4SHdY3I6eN9Wzyasxirj1/vv5kmg==}
     hasBin: true
     dev: true
+
+  /js-base64/3.7.3:
+    resolution: {integrity: sha512-PAr6Xg2jvd7MCR6Ld9Jg3BmTcjYsHEBx1VlwEwULb/qowPf5VD9kEMagj23Gm7JRnSvE/Da/57nChZjnvL8v6A==}
+    dev: false
 
   /js-sdsl/4.2.0:
     resolution: {integrity: sha512-dyBIzQBDkCqCu+0upx25Y2jGdbTGxE9fshMsCdK0ViOongpV+n5tXRcZY9v7CaVQ79AGS9KA1KHtojxiM7aXSQ==}

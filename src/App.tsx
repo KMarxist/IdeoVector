@@ -9,7 +9,12 @@ import ResultPage from './pages/ResultPage';
 import './style.css';
 
 const App: Component = () => (
-  <ErrorBoundary fallback={(err: Error) => <div>出错了：{err.message}</div>}>
+  <ErrorBoundary
+    fallback={(err: Error) => {
+      console.error(err);
+      return <div>出错了：{err.message}</div>;
+    }}
+  >
     <Toaster position="top-center" gutter={8} />
     <header class="card p-4">
       <A href="/IdeoVector/" class="flex no-underline text-inherit">
