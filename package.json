@@ -1,0 +1,45 @@
+{
+  "name": "ideo-vector",
+  "version": "1.0.0",
+  "description": "Ideology with Vector.",
+  "packageManager": "pnpm@7.18.2",
+  "scripts": {
+    "start": "vite",
+    "dev": "cross-env DEV=true vite",
+    "preview": "vite preview",
+    "check": "tsc",
+    "build": "vite build"
+  },
+  "license": "AGPL-3.0-or-later",
+  "devDependencies": {
+    "@rollup/plugin-replace": "^5.0.1",
+    "@types/babel__core": "^7.1.20",
+    "@types/gzip-js": "^0.3.3",
+    "@types/node": "^18.11.16",
+    "@typescript-eslint/eslint-plugin": "^5.46.1",
+    "@typescript-eslint/parser": "^5.46.1",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.30.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-solid": "^0.9.1",
+    "prettier": "^2.8.1",
+    "typescript": "^4.9.4",
+    "typescript-plugin-css-modules": "^4.1.1",
+    "vite": "^3.2.3",
+    "vite-plugin-solid": "^2.5.0",
+    "vite-plugin-windicss": "^1.8.10",
+    "windicss": "^3.5.6"
+  },
+  "dependencies": {
+    "@material/mwc-button": "^0.27.0",
+    "@solidjs/router": "^0.5.1",
+    "axios": "^1.2.1",
+    "base64-js": "^1.5.1",
+    "gzip-js": "^0.3.2",
+    "solid-js": "^1.6.5"
+  }
+}

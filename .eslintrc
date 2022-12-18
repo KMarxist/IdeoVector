@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "airbnb-base",
+    "airbnb-typescript",
+    "prettier",
+    "plugin:solid/recommended",
+    "plugin:import/typescript"
+  ],
+  "plugins": ["@typescript-eslint", "prettier", "solid"],
+  "rules": {
+    "prettier/prettier": "error",
+    "react/jsx-filename-extension": 0,
+    "solid/no-unknown-namespaces": ["error", { "allowedNamespaces": ["w"] }]
+  },
+  "parserOptions": {
+    "project": "./tsconfig.json",
+    "extraFileExtensions": [],
+    "parser": "@typescript-eslint/parser"
+  }
+}
