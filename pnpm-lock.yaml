@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@material/mwc-button': ^0.27.0
+  '@material/mwc-icon-button': ^0.27.0
   '@solidjs/router': ^0.5.1
   '@types/babel__core': ^7.1.20
   '@types/gzip-js': ^0.3.3
@@ -19,6 +20,7 @@ specifiers:
   gzip-js: ^0.3.2
   js-base64: ^3.7.3
   prettier: ^2.8.1
+  solid-icons: ^1.0.4
   solid-js: ^1.6.5
   solid-toast: ^0.3.5
   typescript: ^4.9.4
@@ -30,9 +32,11 @@ specifiers:
 
 dependencies:
   '@material/mwc-button': 0.27.0
+  '@material/mwc-icon-button': 0.27.0
   '@solidjs/router': 0.5.1_solid-js@1.6.5
   gzip-js: 0.3.2
   js-base64: 3.7.3
+  solid-icons: 1.0.4_solid-js@1.6.5
   solid-js: 1.6.5
   solid-toast: 0.3.5_solid-js@1.6.5
 
@@ -533,6 +537,14 @@ packages:
     resolution: {integrity: sha512-t5m2zfE93RNKHMjdsU67X6csFzuSG08VJKKvXVQ+BriGE3xBgzY5nZdmZXomFpaWjDENPAlyS4ppCFm6o+DILw==}
     dependencies:
       '@material/mwc-icon': 0.27.0
+      '@material/mwc-ripple': 0.27.0
+      lit: 2.5.0
+      tslib: 2.4.1
+    dev: false
+
+  /@material/mwc-icon-button/0.27.0:
+    resolution: {integrity: sha512-wReiPa1UkLaCSPtpkAs1OGKEBtvqPnz9kzuY+RvN5ZQnpo3Uh7n3plHV4y/stsUBfrWtBCcOgYnCdNRaR/r2nQ==}
+    dependencies:
       '@material/mwc-ripple': 0.27.0
       lit: 2.5.0
       tslib: 2.4.1
@@ -2905,6 +2917,15 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
     dev: true
+
+  /solid-icons/1.0.4_solid-js@1.6.5:
+    resolution: {integrity: sha512-gJTp4in3+OYCs9WvDkSLt4Los2unR3Uoder8wjh15GsfP20xiNOLfPTJllXmn+fI8+k3x7bRYtLGIgWd9fUQug==}
+    engines: {node: '>= 16'}
+    peerDependencies:
+      solid-js: '*'
+    dependencies:
+      solid-js: 1.6.5
+    dev: false
 
   /solid-js/1.6.5:
     resolution: {integrity: sha512-q1/wIIRmrWltNnP3PW/e29eRWCC24hX5amBiOXomw2kDiM6JZZ10l+chK/Oi/6ipwUxeabYl5YD2lJOObY9heA==}

@@ -1,3 +1,23 @@
 :root {
   --mdc-theme-primary: #059669;
 }
+
+.dark {
+  --mdc-button-outline-color: theme('colors.stone.400');
+  --mdc-button-disabled-ink-color: theme('colors.stone.400');
+  --mdc-button-disabled-outline-color: theme('colors.stone.600');
+}
+
+body {
+  @apply bg-stone-100 dark:(bg-stone-900 text-stone-200);
+}
+
+input {
+  @apply bg-stone-100 dark:bg-stone-900;
+}
+
+@layer components {
+  .card {
+    @apply rounded-md bg-stone-50 shadow-app dark:bg-stone-800 dark:shadow-appDark;
+  }
+}

@@ -1,8 +1,24 @@
 import '@material/mwc-button';
 import { useNavigate } from '@solidjs/router';
-import { Component, createSignal } from 'solid-js';
+import { Component, createSignal, JSX } from 'solid-js';
 import questions from '../data/questions';
+import darkMode from '../utils/darkMode';
 import { encResult } from '../utils/processResult';
+
+const QuestButton: Component<JSX.IntrinsicElements['mwc-button'] & { color?: string }> = (
+  props,
+) => (
+  <mwc-button
+    label={props.label}
+    style={{
+      '--mdc-theme-primary': props.color,
+    }}
+    raised={!darkMode.dark()}
+    outlined={darkMode.dark()}
+    fullwidth
+    {...props}
+  />
+);
 
 const QuestPage: Component = () => {
   const [questNum, setQuestNum] = createSignal(0);
@@ -24,50 +40,17 @@ const QuestPage: Component = () => {
       </p>
       <p class="mt-2 text-lg lg:text-2xl">{quest().question}</p>
       <form class="w-full lg:w-[75%] xl:w-[50%] mt-8">
-        <mwc-button onClick={() => submit(2)} raised label="强烈同意" fullwidth />
-        <mwc-button
-          onClick={() => submit(1)}
-          style={{ '--mdc-theme-primary': '#34D399' }}
-          class="mt-2 text-lime"
-          raised
-          label="同意"
-          fullwidth
-        />
-        <mwc-button
-          onClick={() => submit(0)}
-          style={{ '--mdc-theme-primary': '#9E9E9E' }}
-          class="mt-2"
-          raised
-          label="中立 / 不确定"
-          fullwidth
-        />
-        <mwc-button
-          onClick={() => submit(-1)}
-          style={{ '--mdc-theme-primary': '#F87171' }}
-          class="mt-2"
-          raised
-          label="反对"
-          fullwidth
-        />
-        <mwc-button
-          onClick={() => submit(-2)}
-          style={{ '--mdc-theme-primary': '#DC2626' }}
-          class="mt-2"
-          raised
-          label="强烈反对"
-          fullwidth
-        />
-        <mwc-button
-          onClick={(e) => {
-            e.preventDefault();
-            setQuestNum((num) => num - 1);
-          }}
-          style={{ '--mdc-theme-primary': '#3B82F6' }}
+        <QuestButton onClick={() => submit(2)} label="强烈同意" />
+        <QuestButton onClick={() => submit(1)} label="同意" color="#34D399" class="mt-2" />
+        <QuestButton onClick={() => submit(0)} label="中立 / 不确定" color="#9E9E9E" class="mt-2" />
+        <QuestButton onClick={() => submit(-1)} label="反对" color="#F87171" class="mt-2" />
+        <QuestButton onClick={() => submit(-2)} label="强烈反对" color="#DC2626" class="mt-2" />
+        <QuestButton
+          onClick={() => setQuestNum((num) => num - 1)}
+          label="上一题"
+          color="#3B82F6"
           class="mt-2"
           disabled={questNum() === 0}
-          raised
-          label="上一题"
-          fullwidth
         />
       </form>
     </div>
