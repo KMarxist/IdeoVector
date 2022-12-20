@@ -1,6 +1,5 @@
 /* eslint-disable import/no-extraneous-dependencies */
 import { defineConfig } from 'windicss/helpers';
-import forms from 'windicss/plugin/forms';
 import typography from 'windicss/plugin/typography';
 
 export default defineConfig({
@@ -13,5 +12,5 @@ export default defineConfig({
       },
     },
   },
-  plugins: [typography({ dark: true }), forms],
+  plugins: [typography({ dark: true })],
 });
