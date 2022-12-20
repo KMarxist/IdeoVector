@@ -10,7 +10,10 @@ const calculateMesh = (datas: string[]) => {
       mesh.push(res);
     }
   }
-  return { mesh, avgRange: mesh.reduce((a, b) => a + b, 0) / mesh.length };
+  return {
+    mesh,
+    avgRange: datas.length === 0 ? null : mesh.reduce((a, b) => a + b, 0) / mesh.length,
+  };
 };
 
 export default calculateMesh;

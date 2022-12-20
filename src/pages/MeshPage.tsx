@@ -1,5 +1,5 @@
 import '@material/mwc-icon-button';
-import { IoAddCircleOutline, IoCalculator } from 'solid-icons/io';
+import { IoAddCircleOutline, IoCalculator, IoTrashBinOutline } from 'solid-icons/io';
 import { Component, createSignal, For, Show } from 'solid-js';
 import { createStore } from 'solid-js/store';
 import Input from '../components/Input';
@@ -16,14 +16,26 @@ const MeshPage: Component = () => {
       <div class="flex flex-col">
         <For each={persons}>
           {(person, index) => (
-            <Input
-              placeholder={`第 ${index() + 1} 个`}
-              value={person.content}
-              onChange={(e) => {
-                setPersons((pers) => pers.id === person.id, 'content', e.currentTarget.value);
-              }}
-              classList={{ 'mt-2': true }}
-            />
+            <div class="w-full flex mt-2">
+              <Input
+                placeholder={`第 ${index() + 1} 个`}
+                value={person.content}
+                onChange={(e) => {
+                  setPersons((pers) => pers.id === person.id, 'content', e.currentTarget.value);
+                }}
+                classList={{ 'flex-grow': true }}
+              />
+              <mwc-icon-button
+                class="text-green-600 ml-2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  setPersons((pers) => pers.filter((p) => p.id !== person.id));
+                }}
+                disabled={index() === 0}
+              >
+                <IoTrashBinOutline />
+              </mwc-icon-button>
+            </div>
           )}
         </For>
       </div>
@@ -31,7 +43,7 @@ const MeshPage: Component = () => {
         class="text-green-600 mt-2"
         onClick={(e) => {
           e.preventDefault();
-          setPersons((pers) => [...pers, { content: '', id: pers.length }]);
+          setPersons((pers) => [...pers, { content: '', id: Math.random() }]);
         }}
       >
         <IoAddCircleOutline />
@@ -40,7 +52,9 @@ const MeshPage: Component = () => {
         class="text-green-600 mt-2 ml-2"
         onClick={(e) => {
           e.preventDefault();
-          const res = calculateMesh(persons.map((p) => p.content));
+          const res = calculateMesh(
+            persons.map((p) => p.content).filter((content) => content !== ''),
+          );
           console.log(res);
           setAverage(res.avgRange);
         }}

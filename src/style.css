@@ -5,6 +5,7 @@
 .dark {
   --mdc-button-outline-color: theme('colors.stone.400');
   --mdc-button-disabled-ink-color: theme('colors.stone.400');
+  --mdc-theme-text-disabled-on-light: theme('colors.stone.500');
   --mdc-button-disabled-outline-color: theme('colors.stone.600');
 }
 
