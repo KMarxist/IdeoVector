@@ -16,6 +16,11 @@ input {
   @apply bg-stone-100 dark:bg-stone-900;
 }
 
+input::placeholder,
+textarea::placeholder {
+  @apply dark:text-stone-500;
+}
+
 @layer components {
   .card {
     @apply rounded-md bg-stone-50 shadow-app dark:bg-stone-800 dark:shadow-appDark;

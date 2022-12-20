@@ -16,7 +16,7 @@ const DistancePage: Component = () => {
       <h1 class="font-bold text-center text-3xl">距离计算</h1>
       <form class="flex flex-col mt-4">
         <input
-          class=" rounded-md flex-grow font-mono border-1 py-2 px-4"
+          class="rounded-md flex-grow font-mono border-1 py-2 px-4"
           placeholder="你的距离码"
           w:focus="outline-2 outline outline-blue-400"
           value={myRes()}
