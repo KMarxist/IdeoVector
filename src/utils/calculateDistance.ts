@@ -1,14 +1,18 @@
 import { decResult } from './processResult';
 
-const calculateDistance = (one: string, two: string) => {
-  const oneResult = decResult(one);
-  const twoResult = decResult(two);
+export const calculateDistanceRaw = (one: number[], two: number[]) => {
   let distance = 0;
-  for (let i = 0; i < oneResult.length; i += 1) {
-    distance += (oneResult[i] - twoResult[i]) ** 2;
+  for (let i = 0; i < one.length; i += 1) {
+    distance += (one[i] - two[i]) ** 2;
   }
   distance = Math.sqrt(distance);
   return distance;
+};
+
+const calculateDistance = (one: string, two: string) => {
+  const oneResult = decResult(one);
+  const twoResult = decResult(two);
+  return calculateDistanceRaw(oneResult, twoResult);
 };
 
 export default calculateDistance;

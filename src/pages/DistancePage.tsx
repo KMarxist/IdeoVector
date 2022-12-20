@@ -1,7 +1,8 @@
 import '@material/mwc-button';
-import { useLocation } from '@solidjs/router';
+import { A, useLocation } from '@solidjs/router';
 import { Component, createSignal, Show } from 'solid-js';
 import { toast } from 'solid-toast';
+import Input from '../components/Input';
 import questions from '../data/questions';
 import calculateDistance from '../utils/calculateDistance';
 
@@ -15,19 +16,16 @@ const DistancePage: Component = () => {
     <div class="flex flex-col p-4 card">
       <h1 class="font-bold text-center text-3xl">距离计算</h1>
       <form class="flex flex-col mt-4">
-        <input
-          class="rounded-md flex-grow font-mono border-1 py-2 px-4"
+        <Input
           placeholder="你的距离码"
-          w:focus="outline-2 outline outline-blue-400"
           value={myRes()}
           onInput={(e) => setMyRes(e.currentTarget.value)}
         />
-        <input
-          class="rounded-md flex-grow font-mono border-1 mt-2 py-2 px-4"
+        <Input
           placeholder="别人的距离码"
-          w:focus="outline-2 outline outline-blue-400"
           value={otherRes()}
           onInput={(e) => setOtherRes(e.currentTarget.value)}
+          classList={{ 'mt-2': true }}
         />
         <mwc-button
           label="计算"
@@ -65,6 +63,7 @@ const DistancePage: Component = () => {
           距离的计算方法是，把对每道题的回答作为一个坐标轴，将两者坐标值的差的平方相加后开根号。具体可见本项目{' '}
           <a href="https://github.com/KMarxist/IdeoVector">README</a>
         </p>
+        <A href="/IdeoVector/mesh">计算距离平均值</A>
       </div>
     </div>
   );
